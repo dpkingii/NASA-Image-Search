@@ -30,30 +30,44 @@ body {
 .back-btn{
   width: 8vw;
   margin-top: 5vh;
-  margin-left: 14.5vw;
+  margin-left: 15vw;
   margin-bottom: 1vh;
 }
 
 .arrow-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 2rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  width: 50px;
   height: 50px;
 }
 
 .arrow-left {
-  left: 3vw !important;
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent; 
+  border-left: 20px solid transparent; 
+  background-color: transparent;
+  border-right:30px solid white; 
+  position: absolute;
+  top: 50%;
+  left: 9vw;
 }
 
 .arrow-right {
-  right: 3vw !important;
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  background-color: transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  right: 9vw;
 }
 
 .gallery-card {
@@ -67,6 +81,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  min-height: 75vh;
+  max-height: 75vh;
+
 }
 
 .gallery-card img {
@@ -101,7 +118,7 @@ body {
   width: 50%;
   max-height: 80vh;
   overflow-y: auto;
-  padding: 10px;
+  padding: 20px;
   text-align: justify;
 }
 

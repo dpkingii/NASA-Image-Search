@@ -92,12 +92,8 @@ const DisplayPage = () => {
             />
           )}
           <div className="arrow-button">
-            <button className="arrow-left" onClick={handlePrevious}>
-              Previous
-            </button>
-            <button className="arrow-right" onClick={handleNext}>
-              Next
-            </button>
+            <button className="arrow-left" onClick={handlePrevious}></button>
+            <button className="arrow-right" onClick={handleNext}></button>
           </div>
         </>
       )}
