@@ -15,13 +15,13 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="gallery-card container vh-100">
-      <img src={imageUrl} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <p>
-        <strong>Date Created:</strong> {dateCreated}
-      </p>
+    <div className="gallery-card container vh-90">
+      <div className="info">
+        <h2>{title}</h2>
+        <img src={imageUrl} alt={title} />
+        <p className="date">{dateCreated}</p>
+      </div>
+      <div className="description">{description}</div>
     </div>
   );
 };

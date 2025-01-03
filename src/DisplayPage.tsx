@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import GalleryCard from "./GalleryCard";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -18,6 +18,15 @@ const DisplayPage = () => {
   const navigate = useNavigate();
 
   const queryParams = location.state; // Pass search text and year range from LandingPage
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  };
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -63,7 +72,12 @@ const DisplayPage = () => {
 
   return (
     <div className="display-page">
-      <button onClick={() => navigate("/")}>Back</button>
+      <button
+        className="back-btn btn btn-primary"
+        onClick={() => navigate("/")}
+      >
+        Back
+      </button>
 
       {error ? (
         <p className="error-message">{error}</p>
@@ -73,13 +87,17 @@ const DisplayPage = () => {
             <GalleryCard
               title={images[currentIndex].title}
               description={images[currentIndex].description}
-              dateCreated={images[currentIndex].date_created}
+              dateCreated={formatDate(images[currentIndex].date_created)}
               imageUrl={images[currentIndex].href}
             />
           )}
-          <div className="navigation-buttons">
-            <button onClick={handlePrevious}>Previous</button>
-            <button onClick={handleNext}>Next</button>
+          <div className="arrow-button">
+            <button className="arrow-left" onClick={handlePrevious}>
+              Previous
+            </button>
+            <button className="arrow-right" onClick={handleNext}>
+              Next
+            </button>
           </div>
         </>
       )}
