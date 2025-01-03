@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: url("./assets/background.jpg"), #f00 !important;
+  background: url("./assets/background.jpg"), #000 !important;
   background-size: cover;
   color: white;
 }
@@ -26,8 +26,7 @@ body {
   margin: 0 auto;
 
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 
+.gallery-card{
+  background-color: white !important;
+}

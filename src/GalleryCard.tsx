@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 
 interface GalleryCardProps {
   title: string;
@@ -14,7 +15,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="gallery-card">
+    <div className="gallery-card container vh-100">
       <img src={imageUrl} alt={title} />
       <h3>{title}</h3>
       <p>{description}</p>

@@ -10,7 +10,7 @@ interface ImageData {
   href: string;
 }
 
-const DisplayPage: React.FC = () => {
+const DisplayPage = () => {
   const [images, setImages] = useState<ImageData[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [error, setError] = useState("");
