@@ -34,8 +34,8 @@ const DisplayPage = () => {
         const response = await axios.get("https://images-api.nasa.gov/search", {
           params: {
             q: queryParams.searchText,
-            year_start: queryParams.yearStart,
-            year_end: queryParams.yearEnd,
+            year_start: queryParams.startYear,
+            year_end: queryParams.endYear,
             media_type: "image",
           },
         });
